@@ -1,0 +1,42 @@
+* { box-sizing: border-box; font-family: Arial, sans-serif; }
+body { margin: 0; min-height: 100vh; background: linear-gradient(135deg, #e0f2f1, #3498db); display: flex; justify-content: center; align-items: center; overflow-x: hidden; }
+
+.envelope { background: #f0f8ff; padding: 30px; border-radius: 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+.open-envelope { transform: scale(0) rotateY(90deg); opacity: 0; }
+
+#content { width: 90%; max-width: 360px; background: #f0f8ff; padding: 25px; border-radius: 35px; text-align: center; box-shadow: 0 12px 30px rgba(0,0,0,0.15); animation: appear 0.8s forwards; }
+@keyframes appear { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+h1 { color: #2980b9; margin-bottom: 5px; }
+
+.floating-dog { font-size: 90px; margin: 15px 0; display: inline-block; animation: floatDog 3s ease-in-out infinite; }
+@keyframes floatDog { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(5deg); } }
+
+.status-box { background: white; padding: 10px; border-radius: 20px; margin: 15px 0; font-weight: bold; }
+#message { color: #2980b9; font-weight: bold; min-height: 40px; margin-bottom: 10px; }
+.btn { width: 100%; padding: 15px; margin: 8px 0; border-radius: 25px; border: none; background: #2980b9; color: white; font-size: 16px; font-weight: bold; cursor: pointer; box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4); }
+
+.special-buttons { display: flex; justify-content: space-around; margin-top: 20px; }
+.icon-circle { width: 50px; height: 50px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.side-item { cursor: pointer; font-size: 12px; font-weight: bold; color: #555; text-align: center; }
+
+#paws { font-size: 25px; cursor: pointer; margin-top: 15px; }
+#paw-text { color: #2980b9; font-weight: bold; height: 20px; }
+#sad-moments { animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ANIMACIÓN DE BALLENAS CORREGIDA */
+.whale-anim {
+    position: fixed;
+    bottom: -100px; /* Inician fuera de la pantalla */
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 60px;
+    animation: whaleSwim 4s ease-in forwards;
+}
+
+@keyframes whaleSwim {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-50vh) translateX(30px) rotate(15deg); }
+    100% { transform: translateY(-120vh) translateX(-30px) rotate(-15deg); opacity: 0; }
+}

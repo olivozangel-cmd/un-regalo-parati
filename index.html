@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container">
+        <div id="login" class="envelope">
+            <h2>🔐 Acceso especial</h2>
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Entrar 💙</button>
+        </div>
+    </div>
+
+    <div id="content" style="display:none;">
+        <h1>Feliz cumpleaños 💙</h1>
+        <p style="color: #666; font-style: italic;">Esto lo hice con cariño</p>
+
+        <div id="dog" class="floating-dog">🐶</div>
+        
+        <div id="message"></div>
+
+        <div class="status-box">Ojalá este año te trate bonito ✨</div>
+
+        <button class="btn" style="background: #3498db;" onclick="playClick(); showTodayMessage()">Hoy 🗓️</button>
+        <button class="btn" onclick="playClick(); showMessage('dulce')">Algo dulce 🍭</button>
+        <button class="btn" onclick="playClick(); showMessage('bonito')">Algo bonito 🌸</button>
+        <button class="btn" onclick="playClick(); showMessage('sincero')">Algo sinceridad 💌</button>
+        
+        <button class="btn" style="background: #6ab04c;" onclick="playTurtleSound(); showSadMoments()">Si te sientes triste 🐢</button>
+
+        <div id="sad-moments" style="display:none; background: white; padding: 15px; border-radius: 20px; margin-top: 15px; border: 2px dashed #6ab04c;">
+            <p id="sad-text" style="color: #2f3542; font-size: 14px; font-weight: bold; margin: 0;"></p>
+        </div>
+
+        <div class="special-buttons">
+            <div class="side-item" onclick="playClick(); showRoseMessage()">
+                <div class="icon-circle">🌹</div>
+                <span>¡Presiona!</span>
+            </div>
+            <div class="side-item" onclick="spawnWhales()">
+                <div class="icon-circle">🐳</div>
+                <span>¡A nadar!</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div id="paws" onclick="playClick(); pawMessage()">🐾🐾</div>
+            <p id="paw-text"></p>
+            <p id="birthday-counter"></p>
+            <p>— Alguien que piensa en ti</p>
+        </div>
+
+        <audio id="music" loop><source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_4c88e23b4a.mp3" type="audio/mpeg"></audio>
+        <audio id="snd-click"><source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg"></audio>
+        <audio id="snd-turtle"><source src="https://assets.mixkit.co/active_storage/sfx/1109/1109-preview.mp3" type="audio/mpeg"></audio>
+        <audio id="snd-whale"><source src="https://www.soundjay.com/nature/sounds/whale-cries-1.mp3" type="audio/mpeg"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
